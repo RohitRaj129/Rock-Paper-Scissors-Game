@@ -39,7 +39,7 @@ header{
 .btn{
     height: 20vmin;
     width: 20vmin;
-    border: 0.2rem solid black;
+    /* border: 0.2rem solid black; */
     border-radius: 50%;
     font-size: 12vmin;
     background-color: #3C6E71;
