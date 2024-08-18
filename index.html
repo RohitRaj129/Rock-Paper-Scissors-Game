@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <h3>Rock Paper Scissors Game</h3>
+    </header>
+    <main>
+        <div class="gameContainer">
+            <div class="btns">
+                <div id="rockBtn" class="btn">✊🏻</div>
+                <div id="paperBtn" class="btn">🖐🏻</div>
+                <div id="scissorsBtn" class="btn">✌🏻</div>
+            </div>
+            <div class="scoreContainer">
+                <span class="score"><i class="fa-regular fa-user icon" ></i>: 0</span>
+                <span class="score"><i class="fa-solid fa-robot icon"></i>: 0</span>
+            </div>
+            <p id="win-msg"></p>
+            <button id="newGameBtn">New Game</button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
