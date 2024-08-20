@@ -6,6 +6,7 @@ const winMsg = document.querySelector("#win-msg");
 const win_msg = document.querySelector(".win_msg");
 const UserScore = document.querySelector("#user");
 const CompScore = document.querySelector("#comp");
+const newGameBtn = document.querySelector("#newGameBtn");
 
 const genCompChoice = () => {
     let choices = ["rock", "paper", "scissors"];
@@ -19,12 +20,25 @@ const drawGame = () => {
     win_msg.style.backgroundColor = "#3C6E71"
 }
 
+const newGame = () => {
+    userScore = 0;
+    compScore = 0;
+    winMsg.innerText = "Start the Game.";
+    win_msg.style.backgroundColor = "#3C6E71";
+    UserScore.innerText = userScore;
+    CompScore.innerText = compScore;
+}
+
+newGameBtn.addEventListener("click", () => {
+    newGame();
+})
+
 const showWinner = (userWin) => {
     if(userWin){
         userScore++;
         winMsg.innerText = `You Win!`;
         win_msg.style.backgroundColor = "Green";
-        UserScore.inenerText = userScore;
+        UserScore.innerText = userScore;
     }else{
         compScore++;
         winMsg.innerText = `You Lose.`;
@@ -50,7 +64,7 @@ const playGame = (userChoice) => {
         }else{
             userWin = compChoice === "rock" ? false : true;
         }
-        showWinner(userWin)
+        showWinner(userWin, userChoice, compChoice)
     }
 }
 
