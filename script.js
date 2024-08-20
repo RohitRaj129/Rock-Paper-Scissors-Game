@@ -4,6 +4,8 @@ let compScore = 0;
 const btns = document.querySelectorAll(".btn");
 const winMsg = document.querySelector("#win-msg");
 const win_msg = document.querySelector(".win_msg");
+const UserScore = document.querySelector("#user");
+const CompScore = document.querySelector("#comp");
 
 const genCompChoice = () => {
     let choices = ["rock", "paper", "scissors"];
@@ -19,11 +21,15 @@ const drawGame = () => {
 
 const showWinner = (userWin) => {
     if(userWin){
+        userScore++;
         winMsg.innerText = `You Win!`;
         win_msg.style.backgroundColor = "Green";
+        UserScore.inenerText = userScore;
     }else{
+        compScore++;
         winMsg.innerText = `You Lose.`;
         win_msg.style.backgroundColor = "Red";
+        CompScore.innerText = compScore;
     }
 }
 
